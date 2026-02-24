@@ -41,6 +41,6 @@ jobs:
          run: |
            echo Add other actions to build,
            echo test, and deploy your project.
-           if: [ "${{ github.ref }}" == "ref.heads.main" ]; then
-             echo This is from the main branch.
+           if: ${{ github.ref  == 'ref.heads.main' }}
+           run: echo This is from the main branch.
            echo This is a pull command to trigger github action.
