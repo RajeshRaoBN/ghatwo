@@ -49,3 +49,7 @@ jobs:
             - name: Echo the workflow run URL
               run: |
                   echo "The workflow run URL is: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+            - name: check-os
+              if: runner.os != 'Windows'
+              run: echo "The runner's operating system is $RUNNER_OS."
